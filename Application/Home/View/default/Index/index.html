@@ -1,0 +1,25 @@
+<extend name="Base/common"/>
+
+<block name="header"></block>
+
+
+<block name="body">
+    <!-- <a href="{:U('Getyuebing/detail?id='.$article['id'])}">月饼啊</a>
+     -->
+     <button id="hoverFun">悬浮上来获取ajax</button>
+     <script type="text/javascript">
+            $("#hoverFun").hover(function(){
+                $.ajax({
+                    type:'get',
+                    url:'index.php/home/Index/geryuebing',
+                    success:function(data){
+                        console.log(data);
+                    },
+                    error:function(data){
+                        console.log(data);
+                    }
+                })
+            })
+ </script>
+</block>
+
